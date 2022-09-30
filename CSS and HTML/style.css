@@ -1,0 +1,16 @@
+p
+{
+    /*color:red;*/
+    color: rgba(114, 189, 255, 0.626)
+}
+
+/* basic selectors*/
+#first
+{
+    color:red;
+}
+
+.colors
+{
+    color:black;
+}
