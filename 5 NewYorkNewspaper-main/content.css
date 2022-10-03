@@ -1,24 +1,68 @@
 .page {
-  width:
-  height:
+    width: 400px;
+    height: 530px;
+    /*background-color: #D3D0CB; */
+    background-image: linear-gradient(#D3D0CB, #a39a81);
+    padding: 20px;
+    border-radius: 25px;
 }
 
-#article_title {
-
+#article_title
+{
+    font-family: "Anton";
+    letter-spacing: 4px;
+    font-weight: 2;
+    font-size: 30px;
+    line-height: 0;
+    color: #461220;
+    margin-top: 20px;
+    text-shadow: 5px 5px 5px #4C5760;
 }
 
-#intro {
-
+#intro
+{
+    font-family: "Oswald";
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 2.3;
+    color: #8C2F39;
 }
 
-.question{
-
+.question
+{
+    font-family: "Railway";
+    letter-spacing: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    color: #4C5760;
+    margin-bottom: 5px;
 }
 
-.answer{
-
+.answer
+{
+    font-family: "Railway";
+    letter-spacing: 0px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1;
+    color: #4C5760;
+    margin-top: 5px;
 }
 
-#block_quote {
-
+#block_quote
+{
+    font-family: "Oswald";
+    letter-spacing: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #8C2F39;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-left: 1px solid black;
+    padding: 5px;
 }
