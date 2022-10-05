@@ -1,0 +1,166 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #C4E0E7;
+}
+
+.area{
+  width: 100%;
+  padding:0px;
+  margin: 0px;
+  display: grid;
+}
+
+#header{
+  grid-template-rows: 150px;
+  grid-template-columns: 1fr;
+  justify-content: stretch;
+  border-bottom: solid #393939 thick;
+}
+
+.background-image{
+  width: 100%;
+  height: 100%;
+}
+
+#title{
+  color: #393939;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  left: 32%;
+  top: 2%;
+  font-size: 100px;
+  font-family: 'Staatliches', cursive;
+}
+
+#body{
+  grid-template-columns: 30px 1fr 1fr 1fr 30px;
+  grid-template-rows: 400px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  grid-column-gap: 30px;
+}
+
+.todolist{
+  background-color: lightgrey;
+  border-radius: 10%;
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+  justify-content: center;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.todolist:hover{
+  box-shadow: 10px 10px #393939;
+}
+
+#notstarted{
+  grid-column: 2/ span 1;
+  border-color: #D57070;
+}
+
+#inprogress{
+  grid-column: 3/ span 1;
+  border-color: #F7BC7F;
+}
+
+#complete{
+  grid-column: 4/ span 1;
+  border-color: #B2CBB9;
+}
+
+.taskTitle{
+  font-family: 'Raleway', sans-serif;
+}
+
+.task{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Self Added Portion */
+#notes
+{
+    grid-template-rows: 150px;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    border-top: solid #393939 thick;
+    border-bottom: solid #393939 thick;
+}
+
+#notestitle
+{
+    color: #393939;
+    position:absolute;
+    margin: auto;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Staatliches', cursive;
+}
+
+.notebullets
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Extension by Raymond Lin*/
+#test
+{
+  grid-column: 3/ span 1;
+  width: 50%;
+  margin: auto;
+  border-color: #ab0e0e;
+}
+
+#content
+{
+  width: 100%;
+  text-align: center;
+}
+
+#list
+{
+  color: red;
+  font-size: 25px;
+}
+
+#links
+{
+  padding: 10px;
+}
+
+.listItems
+{
+  padding: 10px;
+}
+
+.linkItems
+{
+   font-size: 30px;
+   color: #393939;
+}
+
+.items
+{
+  font-size: larger;
+}
+
+#complete
+{
+  grid-column: 4/ span 1;
+  border-color: #B2CBB9;
+}
+
+.taskTitle
+{
+  font-family: 'Raleway', sans-serif;
+}
+
+.task
+{
+  font-family: 'Raleway', sans-serif;
+}

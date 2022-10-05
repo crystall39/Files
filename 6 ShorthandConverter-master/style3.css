@@ -1,0 +1,49 @@
+.puppy{
+  width: auto;
+  height: 100px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header{
+  width: 100%;
+  background-color: lightgreen;
+  text-align: center;
+  margin-bottom: 10px;
+  border: solid grey thick;
+  color: grey;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.pictures{
+  display: flex;
+  justify-content: center;
+}
+
+#puppy1{
+  border: solid black thick;
+}
+
+#puppy2{
+  border: solid darkred thick;
+}
+
+#puppy3{
+  border: solid darkblue thick;
+}
+
+.info {
+  text-align: center;
+  color: darkgreen;
+}
