@@ -1,0 +1,176 @@
+/* Selector_1: select all h1 elements on the page. 
+If this selector is done correctly, 
+you'll see that your title "My Checkers Game" 
+is centered on the page. */
+
+h1
+{
+  text-align: center;
+}
+
+/* Selector_2: Select the element with an id of "board". 
+Once this selector is done, 
+you'll see that the red chunk of images
+shift towards the right. */
+
+#board
+{
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  justify-content: center;
+}
+
+/* Selector_3: select all elements with a class of "subtitle".
+ Now you'll see that the "\~The Best Game Ever\~" text 
+shifts to the center of the page and the font becomes smaller.*/
+
+.subtitle
+{
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Selector_4: select every paragraph directly after an h2. 
+You'll see that the text "by Insert Name" becomes 
+centered, grey, and smaller. */
+
+h2 +p
+{
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+}
+
+/* Selector_5: select every paragraph element 
+that is directly preceded by a div 
+bonus points if you can find a way to do this 
+differently from number 4. This will center and underline 
+the text underneath the board(the area currently 
+filled with red images). */
+
+div ~p
+{
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Selector_6: select all image elements that have a parent 
+that is a div. When this selector is correct, 
+the two red chunks will disappear and you'll be able to see
+all of the red board pieces. */
+
+div >img
+{
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  border-radius: 50%;
+  display:block;
+  border: solid grey thin;
+}
+
+/* Selector_7: select all elements with a class of "cell" 
+that have a parent div element 
+(not just all elements with a class of cell, 
+since according to the html, the board is also just a larger cell).
+The correct selector will result in the outline
+of all of the cells of the board correctly displaying. 
+The board should be centered. */
+
+div >.cell{
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 150%;
+}
+
+
+/* Selector_8: select every div 
+inside of another div inside of another div. 
+This will result in the blue pieces appearing. */
+
+div >div >div
+{
+  display: block;
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+  border: solid grey thin;
+  margin: auto;
+  background-color: blue;
+}
+
+/* Selector_9: select every odd numbered element 
+that has the class "cell" as well as a parent that
+has an id of "board" (with cell 1 being the first element 
+with a class of cell that has a parent element with
+an id of board and so on). This will result in the
+black tile pieces appearing on the board. 
+*Hint for Selector* 9:First, figure out how to select every 
+odd number element with a particular class,
+then use what you used in the above two selectors 
+to specify what the parent must be.*/
+
+/*
+#board .cell:nth-child(odd) 
+{
+  background-color: black;
+}
+*/
+
+/*Extension: Multi-colored board */
+
+#board .cell:nth-child(3n) 
+{
+  background-color: black;
+}
+
+#board .cell:nth-child(3n + 1)
+{
+  background-color: purple;
+}
+
+#board .cell:nth-child(3n + 2)
+{
+  background-color: white;
+}
+
+/* 
+Selector_10: select all image elements when you hover
+your mouse over them AND all of the elements selected
+in selector 8 (div inside of div inside of div)
+when you hover your mouse over them. 
+This will result in all of the board pieces getting
+a yellow border when you place your mouse over them.
+*Hint for Selector 10*-first, figure out how to select every 
+image element when you hover over it. 
+Then use this pattern to select every div inside
+of a div inside of a div when you hover over it.
+Finally, figure out how to select two types of things
+at the same time.* */
+
+img:hover, div>div>div:hover
+{
+  border: solid yellow thin;
+}
+
+/* ## Extensions
+Now that your board is looking great and you've become a css selector master, here are some extensions to keep improving your page! 
+1. Add and change style rules so that the background of the board alternates between three different colors. (For example, a white cell, then a black cell, then a purple cell repeated across the entire board).
+2. Add HTML to the index.html file that gives the person looking at your page all of the rules of checkers. This can be done however you want to. Then write your own style rules to make this section of the page look great.
+3. Research a selector that we didn't use in this lab, then find a way to use it. Feel free to add HTML as needed to make the selector applicable. 
+4. Propose a different extension of your choice. Write what the extension should look like then implement it in your code. */
+
+#rules
+{
+    margin: auto;
+    width: 70%;
+}
+div#rules >ol
+{
+    color: gray;
+    font-family:Arial, Helvetica, sans-serif;
+}
