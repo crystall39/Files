@@ -1,0 +1,38 @@
+table
+{
+    border-collapse: collapse;
+}
+
+th
+{
+    padding-right: 10px;
+    background-color: blue;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even)
+{
+    background-color: lightgray;
+    border-top: 1px solid white;
+}
+
+tfoot
+{
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+}
+
+/*
+This took me approximately 20 minutes to complete.
+After searching up how the commands to figure out a table, everything went smoothly.
+However, searching up those commands did take longer than expected because I wasn't sure what to search for.
+*/
