@@ -1,0 +1,23 @@
+body{
+  margin: 0px;
+}
+
+
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+  align-items:center;
+}
+
+.item {
+  margin: 10px;
+}
+
+#circle {
+  height: 40px;
+  width: 40px;
+  background-color: green;
+  border-radius: 50%;
+}
