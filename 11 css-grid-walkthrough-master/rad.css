@@ -1,0 +1,57 @@
+/* The first chunk of this style exist primarily so that you can see the elements - Grid would work without it, but it's easier to see when the font is large and the items have a background color */
+/* Border-box sizing */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Default to a sans-serif font */
+html {
+    font-family: sans-serif;
+}
+
+/* Color each language element */
+#ruby {background-color: #DF4638;}
+#python {background-color: #8DAD53;}
+#js {background-color: #6D4596;}
+#hyper {background-color: #F7CC77;}
+#css {background-color: #2454DB;}
+#aframe {background-color: #DB4260;}
+#p5 {background-color: #E88A9F;}
+#bootstrap {background-color: #7157AD;}
+#java {background-color: #CA2B1D;}
+#swift {background-color: #ED7B46;}
+#csharp {background-color: #1F5997;}
+#go {background-color: #8ACCDB;}
+
+/* Style the font of the language elements */
+.cell {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+    text-align: center;
+    box-shadow: 3px 3px 1px grey;
+}
+
+/* Style your grid here */
+#grid
+{
+    display:grid;
+    /* 6 x 2, refer to img1.png */
+    /*
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 100px);
+    */
+
+    /* 2 x 6, refer to img3.png */
+    /*
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 100px);
+    */
+
+    /* 3 x 4, second row larger than the others, refer to img3.png */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 200px 100px 100px;
+}
