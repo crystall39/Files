@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+}
+
+#title
+{
+    grid-column: 1 / -1;
+}
+
+.cousinandfriends
+{
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.siblings
+{
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.auntanduncle
+{
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grandparents
+{
+    grid-column: span 2;
+    grid-row: span 2;
+}

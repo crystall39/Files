@@ -1,0 +1,26 @@
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px) 
+}
+
+#grid-item-1
+{
+    grid-column-start: span 2;
+}
+
+#grid-item-2
+{
+    grid-column-start: 3;
+}
+
+#grid-item-3
+{
+    grid-row-start: 2;
+}
+
+#grid-item-4
+{
+    grid-column-start: span 2;
+}
