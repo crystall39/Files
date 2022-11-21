@@ -1,0 +1,151 @@
+<!-- 
+    Crystal:
+    -wrote information ie title, body, and headers
+    -added a grid that changes based on screen size
+    -sourced images
+
+    Raymond:
+    -added nav bar
+    -added dark and light mode
+    -added footer for copyright
+    -fixed grammar mistakes
+
+    Both
+    -fonts and colors
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
+    <script src="script.js"></script>
+    <title>Food</title>
+</head>
+<body onload="">
+    <nav>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="form.html">Form</a></div>
+        <div class="dropdown">
+            <div class="dropdown-btn">Activities
+                &#9207;
+            </div>
+            <div class="dropdown-content">
+                <div><a href="sleep.html">Sleep</a></div>
+                <div><a href="gaming.html">Gaming</a></div>
+                <div><a href="food.html">Food</a></div>
+                <div><a href="exercise.html">Exercise</a></div>
+            </div>
+        </div>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
+        </div>
+    </nav>
+    
+    <div class="header">
+        <h1>Food</h1>
+        <p> 
+            It's no surprised the food is delicious. Some people like to snack more than others but
+            my statement still stands.
+            There are so many choices of food to eat; what will you choose? I've complied
+            a short list of favorite food items from classmates. I'll even share a recipe~
+        </p>
+    </div>
+
+    <div class="content">
+        <h1> Food Suggestions</h1>
+        <h2> Scrambled Eggs with Ketchup</h2>
+        <img class = "shrinked-images" src = "https://thumbs.dreamstime.com/b/scrambled-eggs-catsup-plate-ketchup-them-140319271.jpg" alt>
+        <p> 
+            Scrambled eggs are a staple breakfast food. But adding ketchup
+            makes it better!* It's a quick and easy dish to make if you know
+            the basics of cooking.
+        </p>
+
+        <h2> Sicilian-Style Pizza</h2>
+        <img class = "shrinked-images" src = "https://www.kingarthurbaking.com/sites/default/files/2020-05/sicilian-style-pizza.jpg" alt>
+        <p>
+            Sicilian-style pizza is a thick-crusted rectangular pizza.
+            It looks very similar to Detroit-style pizza but Sicilian-style
+            pizza usually has more sauce on it. From the picture itself,
+            wouldn't you say it looks delicious?
+        </p>
+
+        <h2> Soup Dumplings</h2>
+        <img class = "shrinked-images" src = "https://cloudfront-us-east-1.images.arcpublishing.com/pmn/GEZZXYV4R5HJVAIMPBULENKI2U.jpg" alt>
+        <p>
+            Soup dumplings are a type of Chinese steamed buns prepared in a
+            small bamboo steaming basket. Inside the bun are seasoned pork
+            filling and hot soup.
+        </p>
+
+        <h2> Lava Cake <br />(with a recipe)</h2>
+        <img class = "shrinked-images" src = "images/lavaCake.jpg" alt>
+        <p> 
+            If you're a chocolate lover, you must've had at least one lava
+            cake before. They're a perfect "fancy" desserts that's not as
+            hard to make as you would think. The only difficult part about
+            it is the timing.
+        </p>
+        <h2> 
+            I did promise I would include a recipe here. If you've never
+            had lava cakes, you can try it now!
+        </h2>
+
+        <h3> Serving size: 4 ramekins</h3>
+
+        <h3> Ingredients</h3>
+        <div class = "ingredients-grid">
+            <ul class = "left">
+                <li> Semi-sweet chocolate - 170g</li>
+                <li> Unsalted butter - 115g</li>
+                <li> All-purpose flour - 31g</li>
+                <li> Sugar - 60g</li>
+                <li> Salt - a pinch</li>
+            </ul>
+        
+            <ul class = "right">
+                <li> 2 eggs</li>
+                <li> 2 egg yolks</li>
+                <li> Oil </li>
+                <li> Cocoa-powder</li>
+            </ul>
+        </div>
+
+        <h3>Steps</h3>
+        <ol>
+            <li> Melt the chocolate and butter in a small pan</li>
+            <li> Preheat the oven to 425°F</li>
+            <li> Mix the sugar, flour, and salt in a bowl</li>
+            <li> Whisk all eggs to the mixture</li>
+            <li> Combine the sugar, salt, flour, and egg mixture with the chocolate and butter mixture</li>
+            <li> Oil the ramekins and dust them with cocoa-powder</li>
+            <li> Spoon the batter evenly amoung each ramekin</li>
+            <li> Bake in the oven for 15 minutes at 425°F**</li>
+        </ol>
+    </div>
+    
+    <div class="ending">
+        <p> *For people who like ketchup</p>
+        <p> **Watch the oven and make sure just the top is solid</p>
+    </div>
+    
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy; Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
+    </div>
+</body>
+</html>

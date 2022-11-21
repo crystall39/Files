@@ -1,0 +1,484 @@
+/* Mobile and CSS selectors for any device size */
+html, 
+body 
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+body
+{
+    background-color: initial;
+    font-size: 2rem;
+}
+/* Only for body since sometimes when reloading the page it causes only the background color 
+   to appear for a few seconds
+ */
+body.light
+{
+    background-color: #F7F5E6;  
+}
+body.dark
+{
+    background-color: #333A56;
+    color: #FFFFFF;
+}
+
+/* Make navbar as a column */
+nav
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 2rem;
+    padding: 1rem;
+    background-color: #52658F;
+}
+
+a
+{
+    text-decoration: none;
+    color: #F7F5E6;
+}
+
+/* Disable color change when link is visited */
+a:visited, 
+.dropdown-btn, #toggle
+{
+   color: #F7F5E6;
+}
+
+/* Link when hovered over */
+a:hover, 
+.dropdown-btn:hover
+{
+    color: #e0dec9;
+}
+
+.dropdown
+{
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: relative;
+    background-color: inherit;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.dropdown-content div
+{
+    padding: .75rem;
+    padding-right: 1rem;
+}
+
+.dropdown-content div:hover 
+{
+    background-color: #4a5b82;
+}
+
+/* Toggle Dark Mode */
+#toggle
+{
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 34px;
+    text-align: center;
+}
+#toggle-btn
+{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+#slider
+{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background-color: #333e5a;
+    width: 80px;
+    height: 34px;
+    margin-top: 3px;
+    border-radius: 34px;    
+}
+#slider-icon
+{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    background-color: #333e5a;
+    /* cf950d ffb300*/
+    box-shadow: inset 3px -2px 12px 3px #FF5F1F, inset -12px -20px 12px 3px #ffb303;
+    /* f2af15 */
+    left: 4px;
+    bottom: 4px;
+    transition: 0.35s ease-in;
+}
+/* move the icon when the button is checked */
+#toggle-btn:checked + #slider-icon    
+{
+    transform: translateX(45px);
+    background-color: #333e5a;
+    box-shadow:  inset -4px -2px 0px 1px #749fbb, inset -12px -5px  #90c0df;  
+}
+
+/* Headers (Also content) */
+.header, .content, form
+{
+    animation: fadeIn 0.4s ease-in; 
+}
+/* Allows the words to slowly appear when you open a new html page */
+@keyframes fadeIn
+{
+    0% {opacity: 0.2;}
+    25% {opacity: 0.5;}
+    50% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+.header h1
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header p
+{
+    text-indent: 30px;
+    margin: auto;
+    width: 70%;
+    font-size: 1.5rem;
+}
+
+/* Content */
+.content
+{
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Select all content children and set it to the center except p elements*/
+.content > *:not(p):not(ol):not(ul)
+{
+    text-align: center;
+}
+
+.content p
+{
+    text-indent: 30px;
+    font-size: 1.5rem;
+}
+
+/* Centers lists */
+.lists
+{
+    display: inline-block;
+    text-align: center;
+}
+
+li
+{
+    font-size: 1.5rem;
+}
+
+/* Photo Gallery */
+.wrapper
+{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+}
+
+/* Ingredients */
+.ingredients-grid
+{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+}
+
+.left
+{
+    margin-bottom: 0;
+    margin-block-start: 0px;
+}
+
+.right
+{
+    margin-top: 0;
+    margin-block-end: 0px;
+}
+
+/* Form */
+form
+{
+    margin: 2rem;
+}
+
+input, 
+textarea
+{
+    width: 100%;
+    background-color: #5171b99e;
+}
+
+
+input[type]:not([type=reset], [type=submit], [type=checkbox]):focus,
+textarea:focus
+{
+    border: 3px solid #555;
+    background-color: #5d79c0;
+}
+
+textarea
+{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+}
+
+/* Differentiate colors for the submit and reset button on the form */
+input[type=submit], 
+input[type=reset]
+{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #52658F;
+    color: #F7F5E6;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table, 
+th 
+{
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+td
+{
+    width: 33%;
+}
+
+tr:first-child
+{
+    background-color: #52658F;
+}
+
+/* Light mode */
+table,
+tr
+{
+    background-color: #E8E8E8;
+}
+
+tr:nth-child(even)
+{
+    background-color:#dadada;
+}
+
+tr:first-child
+{
+    color: #F7F5E6;
+}
+
+/* Dark mode */
+table.dark,
+tr.dark
+{
+    background-color: #39445c;
+}
+
+tr.dark:nth-child(even)
+{
+    background-color:#41506f;
+}
+
+img:not(.shrinked-images)
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+/* Make images a consistent size */
+.shrinked-images
+{
+    display: block;
+    opacity: 0;
+    width: 90%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 5%;
+    transition: 1s ease;
+}
+.shrinked-images.active
+{
+    display: block;
+    opacity: 1;
+}
+.shrinked-images + p
+{
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(150px);
+   transition: 1s ease;
+   z-index: 0;
+}
+
+.shrinked-images.active + p
+{
+    position: relative;
+    display: block;
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+.ending
+{
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Footer container */
+#footer
+{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 60px;
+    flex: 1;
+    justify-content: center;
+}
+
+/* Footer */
+footer
+{
+    width: 100%;
+    height: 50px;
+    background-color: #E8E8E8;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 1s ease;
+    /* flex: 1; */
+}
+footer.dark
+{
+    color: white;
+    background-color: #39445c;
+}
+footer p
+{
+    margin: 0px;
+}
+
+/* wider screens */
+@media  screen and (min-width: 768px)
+{
+    /* row for wider screen */
+    nav
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: hidden;
+        height: fit-content
+    }   
+    .shrinked-images
+    {
+        width: 60%;
+    }
+    .dropdown
+    {
+        overflow: hidden;
+        text-align: left;
+        width: fit-content;
+    }
+    
+    .dropdown-content
+    {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: #52658F;
+        opacity: 1;
+        visibility: 1;
+    }
+    
+    .dropdown:hover .dropdown-content
+    {
+        display: block;
+    }
+    
+    .dropdown-content div
+    {
+        padding: .75rem;
+        padding-right: 2rem;
+    }
+    
+    .dropdown-content div:hover 
+    {
+        background-color: #4a5b82;
+    }
+    
+    .wrapper
+    {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-rows: repeat(2, minmax(100px, 1fr));
+    }
+    
+    #toggle
+    {
+        text-align: center;
+        margin: 0px;
+    }
+ 
+    .ingredients-grid
+    {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .left
+    {
+        grid-column-start: 1;
+        text-align: left;
+        margin-left: 25%;
+    }
+
+    .right
+    {
+        grid-column-start: 2;
+        text-align: left;
+        margin-left: 15%;
+    }
+    #footer
+    {
+        margin-top: 0px;
+    }
+    
+}

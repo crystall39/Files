@@ -1,0 +1,84 @@
+<!-- 
+    Crystal:
+    -wrote information ie title, body
+    -sourced images and placed in grid
+
+    Raymond:
+    -added nav bar
+    -added a dropdown to remove cluttering in the page
+    -added dark and light mode
+    -fixed grammar mistakes
+
+    Both
+    -fonts and colors
+    -added footer for copyright
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  Apply custom google font    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!--  Tab icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico"> 
+    <script src="script.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <div><a href="index.html">Home</a></div><div>
+        <a href="form.html">Form</a></div>
+        <div class="dropdown">
+            <div class="dropdown-btn">Activities
+                &#9207;
+            </div>
+            
+            <div class="dropdown-content">
+                <div><a href="sleep.html">Sleep</a></div>
+                <div><a href="gaming.html">Gaming</a></div>
+                <div><a href="food.html">Food</a></div>
+                <div><a href="exercise.html">Exercise</a></div>
+            </div>
+        </div>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
+        </div>
+    </nav>
+            
+    <!-- Title -->
+    <div class = "header">
+        <h1>Things to do when you're bored</h1>
+        <p> Do you ever get bored at home? Why am I even asking this question? Of course, you do (unless you're busy with homework)!</p>
+        <p> Boredom may be a luxury because you have the free time to spend however you like.
+            However, it may seem like there is nothing to do. Or perhaps your options just don't seem interesting enough.
+            Thus, we have compiled a small list of things to do when boredom hits you.
+            Using the navigation bar above, feel free to explore the activities planned out!
+        </p>
+    </div>
+    <br>
+    <div class = "wrapper">
+        <img src = "https://img.freepik.com/premium-photo/sunny-day-light-bedroom-bed-is-cup-coffee-open-book-beautiful-morning_405338-27.jpg?w=2000" alt>
+        <img src = "https://media.wired.com/photos/627da1085d49787abdf713b4/16:9/w_2400,h_1350,c_limit/Pakistani-Gamers-Want-a-Seat-at-the-Table-Culture-shutterstock_1949862841.jpg" alt>
+        <img src = "https://cdn.theculturetrip.com/wp-content/uploads/2017/09/bath-coffee-dmirty-mazurenkoflickr-1024x686.jpg" alt>
+        <img src = "https://www.hussle.com/blog/wp-content/uploads/2022/04/Empty-gym-1200x900.jpg" alt>
+    </div>
+    <br />
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy; Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
+    </div>
+</body>
+</html>
