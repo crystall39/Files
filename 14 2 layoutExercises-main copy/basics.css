@@ -1,0 +1,57 @@
+@media screen and (min-width: 768px) /* tablet screens*/
+{
+    .container 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img
+    {
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 765px) /* mobile screens*/
+{
+    .container 
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img
+    {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) /* Large screens*/
+{
+    .container 
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    img
+    {
+        width: 100%;
+    }
+
+    .one
+    {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .two
+    {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}

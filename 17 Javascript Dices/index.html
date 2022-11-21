@@ -1,0 +1,35 @@
+<!-- Crystal Ling, Web Development, Even 7 + 8
+     This program gets two random numbers between
+     1 to 6 (simulates 2 dice) and adds up the values-->
+<!DOCTYPE html>
+
+<head></head>
+<title></title>
+<style></style>
+<script>
+    function initialize()
+    {
+        output1 = document.getElementById("numberOut1");
+        output2 = document.getElementById("numberOut2");
+        addOutput = document.getElementById("addingIn");
+        generateNum();
+    }
+    function generateNum()
+    {
+        randomNum1 = parseInt(Math.random() * 6) + 1;
+        randomNum2 = parseInt(Math.random() * 6) + 1;
+        output1.innerHTML = randomNum1;
+        output2.innerHTML = randomNum2;
+
+        addition = randomNum1 + randomNum2;
+        addOutput.innerHTML = addition;
+    }
+
+</script>
+<body onload = "initialize();">
+    <p> Your first number is <span id = "numberOut1"> 0</span></p>
+    <p> Your second number is <span id = "numberOut2"> 0</span></p>
+    <p> Your sum is <span id = "addingIn"> 0</span></p>
+    <button onclick = "generateNum()"> Generate a random number</button>
+</body>
+</html>

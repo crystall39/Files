@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Calorie Counter</title>
+        <style></style>
+        <script>
+            function initialize()
+            {
+                penniesOutput = document.getElementById("penniesOut");
+                penniesWorthOut = document.getElementById("penniesWorth");
+				
+                nickelsOutput = document.getElementById("nickelsOut");
+                nickelsWorthOut = document.getElementById("nickelsWorth");
+
+                dimesOutput = document.getElementById("dimesOut");
+                dimesWorthOut = document.getElementById("dimesWorth");
+
+                quartersOutput = document.getElementById("quartersOut");
+                quartersWorthOut = document.getElementById("quartersWorth");
+
+                pennies = 0;
+                penniesW = 0;
+                nickels = 0;
+                nickelsW = 0;
+                dimes = 0;
+                dimesW = 0;
+                quarters = 0;
+            }
+
+            function addOneP()
+            {
+                pennies +=1;
+                penniesW += 1;
+                display();
+            }
+
+            function subtractOneP()
+            {
+                pennies -=1;
+                penniesW -= 1;
+                if (pennies < 0)
+                {
+                    pennies = 0;
+                    penniesW = 0;
+                }
+                display();
+            }
+
+            function addOneN()
+            {
+                nickels +=1;
+                nickelsW += 5;
+                display();
+            }
+
+            function subtractOneN()
+            {
+                if (nickels - 1 > -1)
+                {
+                    nickels -= 1;
+                    nickelsW -= 5;
+                }
+                display();
+            }
+
+            function addOneD()
+            {
+                dimes +=1;
+                dimesW += 10;
+                display();
+            }
+
+            function subtractOneD()
+            {
+                if (dimes - 1 > -1)
+                {
+                    dimes -= 1;
+                    dimesW -= 10;
+                }
+                display();
+            }
+
+            function display()
+            {
+                penniesOutput.innerHTML = pennies;
+                convertedP = penniesW / 100;
+                if(Number.isInteger(convertedP * 10) && (penniesW != 0) && !Number.isInteger(convertedP))
+                {
+                    convertedP += "0";
+                }
+                penniesWorth.innerHTML = convertedP;
+
+                nickelsOutput.innerHTML = nickels;
+                convertedN = nickelsW / 100;
+                if (Number.isInteger(convertedN * 10) && (nickelsW != 0) && !Number.isInteger(convertedN))
+                {
+                    convertedN += "0";
+                }
+                nickelsWorth.innerHTML = convertedN;
+
+                dimesOutput.innerHTML = dimes;
+                convertedD = dimesW / 100;
+                if (dimesW != 0 && !Number.isInteger(convertedD))
+                {
+                    convertedD += "0";
+                }
+                dimesWorth.innerHTML = convertedD;
+                
+                
+                quartersOutput.innerHTML = quarters;
+                // quartersWorthOut.innerHTML = quartersW;
+            }
+        </script>
+    </head>
+    <body onload = initialize();>
+        <h1> Pennies </h1>
+        <p> <span id = "penniesOut"> 0</span> pennies</p>
+        <p>$ <span id = "penniesWorth"> 0</span></p>
+        <button onclick = "addOneP();"> Add pennies</button>
+        <button onclick = "subtractOneP();"> Subtract pennies</button>
+
+        <hr>
+
+        <h1> Nickels </h1>
+        <p> <span id = "nickelsOut"> 0</span> nickels</p>
+        <p>$ <span id = "nickelsWorth"> 0</span></p>
+        <button onclick = "addOneN();"> Add nickels</button>
+        <button onclick = "subtractOneN();"> Subtract nickels</button>
+
+        <hr>
+
+        <h1> Dimes </h1>
+        <p> <span id = "dimesOut"> 0</span> dimes</p>
+        <p>$ <span id = "dimesWorth"> 0</span></p>
+        <button onclick = "addOneD();"> Add dimes</button>
+        <button onclick = "subtractOneD();"> Subtract dimes</button>
+
+        <hr>
+
+        <h1> Quarters </h1>
+        <p> <span id = "quartersOut"> 0</span> quarters</p>
+        <p>$ <span id = "quartersWorth"> 0</span></p>
+        <button onclick = "addOneQ();"> Add quarters</button>
+        <button onclick = "subtractOneQ();"> Subtract quarters</button>
+
+        <hr>
+
+        <h1> Total money worth</h1>
+    </body>
+</html>
