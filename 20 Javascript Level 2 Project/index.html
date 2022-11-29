@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Match Game</title>
+        <style>
+
+            .all
+            {
+                margin: auto;
+                width: 80%;
+                text-align: center;
+            }
+            .wrapper
+            {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-gap: 5px;
+            }
+
+            div > div > div
+            {
+                background-color: gray;
+            }
+        </style>
+        <script>
+            function initialize()
+            {
+                scoreOut = document.getElementById("score");
+
+                scoreOut = 0;
+            }
+            
+            function setColor(ele)
+            {
+                console.log(ele.id);
+                ele.style.backgroundColor = ele.id;
+                match(ele);
+            }
+
+            var firstFlip = false;
+            function match(ele)
+            {
+                firstFlip = !firstFlip;
+
+
+                if (firstFlip)
+                {
+                    firstCard = ele;
+                    scoreOut += 1;
+                }
+                else
+                {
+                    secondCard = ele;
+                    scoreOut += 1;
+                    
+                    if (firstCard.id == secondCard.id)
+                    {
+                        console.log("match");
+                    }
+                    else
+                    {
+                        console.log("no match");
+                        setTimeout(() => {  firstCard.style.backgroundColor = "gray"; }, 1000);
+                        setTimeout(() => {  secondCard.style.backgroundColor = "gray"; }, 1000);
+                        console.log(firstCard)
+                    }
+                }
+
+                score.innerHTML = scoreOut;
+            }
+            
+        </script>
+    </head>
+    <body onload="initialize()";>
+        <div class = "all">
+            <div class = "wrapper">
+                <div id = "red" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "blue" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "orange" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "red" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+
+                <div id = "orange" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "green" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "white" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "yellow" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+
+                <div id = "blue" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "purple" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "yellow" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "white" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+
+                <div id = "purple" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "green" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "pink" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+                <div id = "pink" onclick = "setColor(this);">
+                    <h1> :)</h1>
+                </div>
+            </div>
+
+            <h1>Score: <span id = "score">0</span></h1>
+            <button onclick = "window.location.reload();">Reset</button>
+
+            <h1> Brief Instructions</h1>
+            <h2> There are 16 cards in total and 8 matches.</h2>
+            <h2> When the cards are different colors,
+                there will be a 1 second delay for you to memorize
+                those cards' positions.</h2>
+            <h2> You win when all the cards are flipped up
+                and the best score is 16.</h2>
+        </div>
+    </body>
+</html>
