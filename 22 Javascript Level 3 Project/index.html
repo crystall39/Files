@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Roll Roll Roll Your Dice</title>
+        <style>
+            table
+            {
+                border: thick solid grey;
+                border-collapse: collapse;
+                width: 80%;
+                text-align: center;
+                margin: auto;
+            }
+
+            th, td
+            {
+                border: thin solid black;
+                padding: 8px;
+                width: 16.6%;
+            }
+
+            div 
+            {
+                text-align: center;
+            }
+
+        </style>
+        <script>
+            function initialize()
+            {
+                diceTable = document.getElementById("table");
+                buttonOne = document.getElementById("button1");
+                buttonTwo = document.getElementById("button2");
+                buttonThree = document.getElementById("button3");
+                Mean = document.getElementById("mean");
+                Median = document.getElementById("median");
+                Mode = document.getElementById("mode");
+                onet = false;
+                twot = false;
+                threet = false;
+                sum = 0;
+                rolls = 0;
+                arr = [];
+                numArr = [];
+                random1 = 0;
+                random2 = 0;
+                random3 = 0;
+                random4 = 0;
+                random5 = 0;
+                random6 = 0;
+                maxNum = 1;
+                maxRandom = random1;
+
+            }
+            function one()
+            {
+                Row1 = diceTable.insertRow();
+                Cell11 = Row1.insertCell();
+                Cell12 = Row1.insertCell();
+                Cell13 = Row1.insertCell();
+                Cell14 = Row1.insertCell();
+                Cell15 = Row1.insertCell();
+                Cell16 = Row1.insertCell();
+                onet = true;
+                clearButtons();
+            }
+            function two()
+            {
+                one();
+                Row2 = diceTable.insertRow();
+                Cell21 = Row2.insertCell();
+                Cell22 = Row2.insertCell();
+                Cell23 = Row2.insertCell();
+                Cell24 = Row2.insertCell();
+                Cell25 = Row2.insertCell();
+                Cell26 = Row2.insertCell();
+                twot = true;
+                clearButtons();
+            }
+            function three()
+            {
+                two();
+                Row3 = diceTable.insertRow();
+                Cell31 = Row3.insertCell();
+                Cell32 = Row3.insertCell();
+                Cell33 = Row3.insertCell();
+                Cell34 = Row3.insertCell();
+                Cell35 = Row3.insertCell();
+                Cell36 = Row3.insertCell();
+                threet = true;
+                clearButtons();
+            }
+
+            function clearButtons()
+            {
+                buttonOne.style.display = "none";
+                buttonTwo.style.display = "none";
+                buttonThree.style.display = "none";
+            }
+
+            function roll()
+            {
+                rnd1 = 0;
+                rnd2 = 0;
+                rnd3 = 0;
+                if (onet)
+                {
+                    rnd1 = parseInt(Math.random() * 6) + 1;
+                    if (rnd1 == 1)
+                    {
+                        Cell11.innerHTML += "| ";
+                        random1++;
+                    }
+                    else if (rnd1 == 2)
+                    {
+                        Cell12.innerHTML += "| ";
+                        random2++;
+                    }
+                    else if (rnd1 == 3)
+                    {
+                        Cell13.innerHTML += "| ";
+                        random3++;
+                    }
+                    else if (rnd1 == 4)
+                    {
+                        Cell14.innerHTML += "| ";
+                        random4++;
+                    }
+                    else if (rnd1 == 5)
+                    {
+                        Cell15.innerHTML += "| ";
+                        random5++;
+                    }
+                    else if (rnd1 == 6)
+                    {
+                        Cell16.innerHTML += "| ";
+                        random6++;
+                    }
+                    sum += rnd1;
+                    rolls++;
+                    arr.push(rnd1);
+                }
+
+                if (twot)
+                {
+                    rnd2 = parseInt(Math.random() * 6) + 1;
+                    if (rnd2 == 1)
+                    {
+                        Cell21.innerHTML += "| ";
+                        random1++;
+                    }
+                    else if (rnd2 == 2)
+                    {
+                        Cell22.innerHTML += "| ";
+                        random2++;
+                    }
+                    else if (rnd2 == 3)
+                    {
+                        Cell23.innerHTML += "| ";
+                        random3++;
+                    }
+                    else if (rnd2 == 4)
+                    {
+                        Cell24.innerHTML += "| ";
+                        random4++;
+                    }
+                    else if (rnd2 == 5)
+                    {
+                        Cell25.innerHTML += "| ";
+                        random5++;
+                    }
+                    else if (rnd2 == 6)
+                    {
+                        Cell26.innerHTML += "| ";
+                        random6++;
+                    }
+                    sum += rnd2;
+                    rolls++;
+                    arr.push(rnd2);
+                }
+
+                if (threet)
+                {
+                    rnd3 = parseInt(Math.random() * 6) + 1;
+                    if (rnd3 == 1)
+                    {
+                        Cell31.innerHTML += "| ";
+                        random1++;
+                    }
+                    else if (rnd3 == 2)
+                    {
+                        Cell32.innerHTML += "| ";
+                        random2++;
+                    }
+                    else if (rnd3 == 3)
+                    {
+                        Cell33.innerHTML += "| ";
+                        random3++;
+                    }
+                    else if (rnd3 == 4)
+                    {
+                        Cell34.innerHTML += "| ";
+                        random4++;
+                    }
+                    else if (rnd3 == 5)
+                    {
+                        Cell35.innerHTML += "| ";
+                        random5++;
+                    }
+                    else if (rnd3 == 6)
+                    {
+                        Cell36.innerHTML += "| ";
+                        random6++;
+                    }
+                    sum += rnd3;
+                    rolls++;
+                    arr.push(rnd3);
+                }
+
+                Mean.innerHTML = sum / rolls;
+
+                arr.sort(function(a,b){return a-b});
+                middle = Math.floor(arr.length / 2);
+                Median.innerHTML = arr.length % 2 !== 0 ? arr[middle] : (arr[middle - 1] + arr[middle]) / 2;
+                
+                if (maxRandom <= random2)
+                {
+                    maxRandom = random2;
+                    maxNum = 2;
+                }
+                if (maxRandom <= random3)
+                {
+                    maxRandom = random3;
+                    maxNum = 3;
+                }
+                if (maxRandom <= random4)
+                {
+                    maxRandom = random4;
+                    maxNum = 4;
+                }
+                if (maxRandom <= random5)
+                {
+                    maxRandom = random5;
+                    maxNum = 5;
+                }
+                if (maxRandom <= random6)
+                {
+                    maxRandom = random6;
+                    maxNum = 6;
+                }
+                Mode.innerHTML = maxNum;
+
+                
+            }
+            </script>
+    </head>
+    <body onload = "initialize();">
+        <table id = "table">
+            <tr> 
+                <td> 1</td>
+                <td> 2</td>
+                <td> 3</td>
+                <td> 4</td>
+                <td> 5</td>
+                <td> 6</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <div>
+            <button id = "button1" onclick = "one();"> One die</button>
+            <button id = "button2" onclick = "two();"> Two dice</button>
+            <button id = "button3" onclick = "three();"> Three dice</button>
+        </div>
+
+        <br>
+        <div>
+            <button id = "Roll" onclick = "roll();"> Roll</button>
+            <p>Mean : <span id = mean>0</span></p>
+            <p>Median : <span id = median>0</span></p>
+            <p>Mode : <span id = mode>0</span></p>
+        </div>
+    </body>
+</html>
