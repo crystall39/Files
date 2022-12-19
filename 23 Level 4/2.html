@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Arrays</title>
+        <style>
+            body
+            {
+                font: bold 18 pt calibri;
+            }
+        </style>
+        <script>
+            function initialize()
+            {
+                arrayOutput = document.getElementById("divout");
+
+                // theList = ["1st Item", "2nd Item", "3rd Item", "4th Item", "5th Item"];
+
+                // // theList[2] = "not the 2nd Item";
+                // theList[5] = "6th Item";
+
+                // arrayOutput.innerHTML = theList;
+                
+                randomList = [];
+
+                var randomLength = getRandomInteger(50, 100);
+
+                for (var i = 0; i < randomLength; i++)
+                {
+                    randomList[randomList.length] = getRandomInteger(-10, 10);
+                }
+
+                displayList();
+            }
+
+            function getRandomInteger(lower, upper)
+            {
+               var multiplier = upper - (lower - 1);
+                var rnd = parseInt(Math.random() * multiplier) + lower;
+
+               return rnd;
+            }
+
+            function displayList()
+            {
+                arrayOutput.innerHTML = "";
+
+                for (var i = 0; i < randomList.length; i++)
+                {
+                    arrayOutput.innerHTML += i + ": " + randomList[i] + "<br />";
+                }
+            }
+        </script>
+    </head>
+
+    <body onload = "initialize();">
+        <div id = "divout"></div>
+    </body>
+</html>

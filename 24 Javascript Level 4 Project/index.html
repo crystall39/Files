@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Grocery List</title>
+        <style>
+            h1
+            {
+                text-align: center;
+            }
+
+            div
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button
+            {
+                margin-left: 1%;
+            }
+
+            #firstLine button:first-of-type
+            {
+                margin-right: 5%;
+            }
+
+
+        </style>
+        <script>
+            function initialize()
+            {
+                item = document.getElementById("Item");
+                deleteI = document.getElementById("Delete")
+                move = document.getElementById("Move");
+                arr = [];
+                arrayOutput = document.getElementById("divout");
+            }
+            function addItem()
+            {
+                arr.push(item.value);
+                display();
+            }
+            function deleteItem()
+            {
+                if (parseInt(deleteI.value) - 1 <= arr.length)
+                {
+                    arr.splice(parseInt(deleteI.value) - 1, 1);
+                    display();
+                }
+            }
+            function moveItemUp()
+            {
+                index = arr.indexOf(move.value);
+                if (index > 0)
+                {
+                    temp = arr[index - 1]
+                    arr[index - 1] = arr[index];
+                    arr[index] = temp;
+                    display();
+                }
+            }
+            function moveItemDown()
+            {
+                index = arr.indexOf(move.value);
+                if (index != -1 && index != arr.length - 1)
+                {
+                    temp = arr[index + 1]
+                    arr[index + 1] = arr[index];
+                    arr[index] = temp;
+                    display();
+                }
+            }
+            function display()
+            {
+                arrayOutput.innerHTML = "";
+
+                for (var i = 0; i < arr.length; i++)
+                {
+                    arrayOutput.innerHTML += i + 1 + ": " + arr[i] + "<br />";
+                }
+            }
+
+        </script>
+    </head>
+    <body onload = "initialize();">
+        <h1>Grocery List</h1>
+        <div id = "firstLine">
+            <input type = "text" id = "Item" onfocus = "this.value = ''">
+            <button onclick = "addItem();">Add Item</button>
+            <input type = "number" min = 1 id = "Delete" onfocus = "this.value = ''">
+            <button onclick = "deleteItem();">Delete Item</button>
+        </div>
+
+        <div>
+            <input type = "text" id = "Move" onfocus = "this.value = ''">
+            <button onclick = "moveItemUp();">Move Item Up</button>
+            <button onclick = "moveItemDown();">Move Item Down</button>
+        </div>
+        
+
+        <div id = "divout"></div>
+
+        
+    </body>
+</html>
