@@ -55,26 +55,34 @@
     </nav>
         <!-- modify this form HTML and place wherever you want your form -->
         <form action="https://formspree.io/f/mdojwvej" method="POST">
-            <label>Name*</label>
-            <input type="text" name="Name" required>
-            
-            <label>How many hours do you sleep in a day?*</label>
-            <input type="number" name="sleep hours" min="0" max="24">
-            
-            <label>Favorite Game*</label>
-            <input type="text" name="Favorite Game" required>
-            
-            <label>Favorite Food*</label>
-            <input type="text" name="Favorite Food" required>
-            
-            <label>Favorite Exercise*</label>
-            <input type="text" name="Favorite Exercise" required>
-            
-            <label>What do you do when you're bored?*</label>
-            <textarea name="bored-thoughts" required></textarea>
-            
-            <label>Comments/Concerns/Suggestions?</label>
-            <textarea name="Comments"></textarea> 
+            <label for = "name">
+                Name*
+                <input type="text" name="Name" id = "name" required>
+            </label>
+            <label for = "sleep">
+                How many hours do you sleep in a day?*
+                <input type="number" name="sleep hours" min="0" max="24" id = "sleep">
+            </label>
+            <label for = "game">
+                Favorite Game*
+                <input type="text" name="Favorite Game" id = "game" required>
+            </label>
+            <label for = "food">
+                Favorite Food*
+                <input type="text" name="Favorite Food" id = "food" required>
+            </label>
+            <label for = "exercise">
+                Favorite Exercise*
+                <input type="text" name="Favorite Exercise" id = "exercise" required>
+            </label>
+            <label for = "boredthoughts">
+                What do you do when you're bored?*
+                <textarea name="bored-thoughts" id = "boredthoughts" required></textarea>
+            </label> 
+            <label for = "comments">
+                Comments/Concerns/Suggestions?
+                <textarea name="Comments" id = "comments"></textarea>
+            </label> 
             <!-- your other form fields go here -->
             <input type="reset" value="Clear Answers">
             <input type="submit" value="Submit">
