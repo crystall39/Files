@@ -1,0 +1,90 @@
+<!-- 
+    Crystal:
+    -fixed grammar mistakes
+
+    Raymond:
+    -wrote form and retrieved back end
+    -added nav bar
+    -added dark and light mode
+    -added footer for copyright
+
+    Both
+    -fonts and colors
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <script src="script.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <nav>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="form.html">Form</a></div>
+        <div class="dropdown">
+            <div class="dropdown-btn">Activities
+                &#9207;
+            </div>
+            <div class="dropdown-content" style="opacity: 1; animation:none;">
+                <div><a href="sleep.html">Sleep</a></div>
+                <div><a href="gaming.html">Gaming</a></div>
+                <div><a href="food.html">Food</a></div>
+                <div><a href="exercise.html">Exercise</a></div>
+            </div>
+        </div>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
+        </div>
+    </nav>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form action="https://formspree.io/f/mdojwvej" method="POST">
+            <label>Name*</label>
+            <input type="text" name="Name" required>
+            
+            <label>How many hours do you sleep in a day?*</label>
+            <input type="number" name="sleep hours" min="0" max="24">
+            
+            <label>Favorite Game*</label>
+            <input type="text" name="Favorite Game" required>
+            
+            <label>Favorite Food*</label>
+            <input type="text" name="Favorite Food" required>
+            
+            <label>Favorite Exercise*</label>
+            <input type="text" name="Favorite Exercise" required>
+            
+            <label>What do you do when you're bored?*</label>
+            <textarea name="bored-thoughts" required></textarea>
+            
+            <label>Comments/Concerns/Suggestions?</label>
+            <textarea name="Comments"></textarea> 
+            <!-- your other form fields go here -->
+            <input type="reset" value="Clear Answers">
+            <input type="submit" value="Submit">
+        </form>
+    
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
+    </div>
+</body>
+</html>

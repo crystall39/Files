@@ -1,0 +1,109 @@
+<!-- 
+    Crystal:
+    -wrote information ie title, body, and headers
+    -sourced images for grid
+
+    Raymond:
+    -added nav bar
+    -added dark and light mode
+    -added footer for copyright
+    -fixed grammar mistakes
+
+    Both
+    -fonts and colors
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
+    <script src="script.js"></script>
+    <title>Exercise</title>
+</head>
+<body>
+    <nav>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="form.html">Form</a></div>
+        <div class="dropdown">
+            <div class="dropdown-btn">Activities
+                &#9207;
+            </div>
+            <div class="dropdown-content">
+                <div><a href="sleep.html">Sleep</a></div>
+                <div><a href="gaming.html">Gaming</a></div>
+                <div><a href="food.html">Food</a></div>
+                <div><a href="exercise.html">Exercise</a></div>
+            </div>
+        </div>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Exercise</h1>
+        <p> 
+            You're probably sighing right now. Exercise? I want to
+            be a couch potato instead!
+        </p>
+        <p>
+            As much as some of us don't like to exercise,
+            it doesn't feel that bad after a while. Sure, you
+            might feel sore the first couple of days of training
+            and it's okay to take a break. But sooner or later,
+            you have to get back up again.
+        </p>
+        <p>
+            You've already slept and ate enough, haven't you?
+            Time to get up and exercise!
+        </p>
+    </div>
+
+    <div class = "content">
+        <h1> Benefits of Exercise</h1>
+        <p> 
+            Exercising will help you manage a healthy weight. Whether you want to
+            get slimmer or build muscle, it's good for you either way. Some people
+            may need to exercise more than others to maintain the same figure, but
+            eating healthy foods is also an important factor.
+        </p>
+        <p>
+            Additionally, exercising prevents diseases such as cardiovascular disease
+            diabetes, and even some cancers. Regular physical activity lowers blood
+            pressure levels and improves cholestrol levels. It also lowers your heart
+            rate, which means your heart doesn't have to work as heard to pump blood.
+        </p>
+        <p>
+            Moreover, exercise can lead to more restful sleep. This, in turn, boosts
+            the immune system and includes all the benefits of sleep (it all comes full
+            circle!). It also allows you to sleep more in general because you're more
+            tired after exercising and expending your energy.
+        </p>
+    </div>
+
+    <div class = "wrapper">
+        <img src = "https://hips.hearstapps.com/hmg-prod/images/running-is-one-of-the-best-ways-to-stay-fit-royalty-free-image-1036780592-1553033495.jpg?crop=0.66732xw:1xh;center,top&resize=640:*" alt = "Man running">
+        <img src = "https://staticg.sportskeeda.com/editor/2022/10/3a7b3-16657691014493-1920.jpg" alt = "Picking up a dumbbell">
+        <img src = "https://media.istockphoto.com/id/1199894704/photo/african-american-young-boy-playing-soccer-in-a-stadium-pitch-child-running-with-soccer-ball.jpg?s=612x612&w=0&k=20&c=mRKKlAIo7CoWLKcxQGbSaKYO6_VdWxa1NpAtqb4oBT4=" alt = "Kid playing soccer">
+        <img src = "https://boardroom.tv/wp-content/uploads/2022/03/GettyImages-1370564264-e1648488757526.jpg" alt = "Two men playing basketball">
+    </div>
+    <br>
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy; Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
+    </div>
+</body>
+</html>
