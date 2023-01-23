@@ -41,7 +41,7 @@ app.post('/api/courses', (req, res) =>
     const course = 
     {
         id: courses.length + 1,
-        name: req.nody.name
+        name: req.body.name
     }
 
     courses.push(course);
@@ -58,7 +58,7 @@ app.put('/api/courses', (req, res)=>
     const course = 
     {
         id: courses.length + 1,
-        name: req.nody.name
+        name: req.body.name
     }
 
     courses.push(course);
