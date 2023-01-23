@@ -41,27 +41,33 @@ app.post('/api/courses', (req, res) =>
     const course = 
     {
         id: courses.length + 1,
-        name: req.nody.name
+        name: req.body.name
     }
 
     courses.push(course);
 })
 
-app.put('/api/courses', (req, res)=>
+app.put('/api/courses/:id', (req, res)=>
 {
     if (req.body.name.length == 0)
     {
-        res.status(404).send("Not found")
+        res.status(404).send("No name")
         return;
     }
 
-    const course = 
+    if (req.params.id < 0 || req.params.id > course.length)
     {
-        id: courses.length + 1,
-        name: req.nody.name
+        res.status(400).send("Issue with ID");
+        return;
     }
 
-    courses.push(course);
+    course[req.params.id - 1] = 
+    {
+        id: req.params.id,
+        name: req.body.name
+    }
+
+    res.setMaxListeners(200).send(courses[req.params.id - 1]);
 })
 
 app.delete('/api/courses', (req, res)=>
